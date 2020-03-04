@@ -1,10 +1,20 @@
 import React from "react";
-
-const MessageList = () => {
+import "./MessageList.scss";
+const MessageList = ({ messages }) => {
+  console.log("1", messages);
   return (
-    <div>
-      <h2>Message List</h2>
-    </div>
+    <React.Fragment>
+      <ul className="message-list">
+        {messages.map((message, index) => {
+          return (
+            <li key={index} className="message">
+              <div className="sender">{message.senderId}</div>
+              <div className="text">{message.text}</div>
+            </li>
+          );
+        })}
+      </ul>
+    </React.Fragment>
   );
 };
 

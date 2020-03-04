@@ -1,0 +1,18 @@
+.message-list {
+  list-style-type: none;
+  & .message {
+    font-size: 1.5rem;
+
+    & .sender {
+      font-weight: bold;
+      width: 20vw;
+    }
+    & .text {
+      width: 20vw;
+      //   border: 2px solid blue;
+      border-radius: 5px;
+      margin: 10px;
+      background-color: lightblue;
+    }
+  }
+}
